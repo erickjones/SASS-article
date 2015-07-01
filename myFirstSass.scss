@@ -1,0 +1,73 @@
+@import '_reset';
+
+// - - - - - VARIABLES - - - - - //
+ 
+// Create a variable with $
+$primary-color: tomato;
+ 
+// Use your newborn variable
+h1 {
+ color: $primary-color;
+}
+
+
+// - - - - - Nesting Selectors and the "&" selector - - - - - //
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  
+  .top {
+   font-size:14px;
+  }
+  
+  &:hover {
+    text-decoration: underline;
+  }
+  
+  nav & {
+    color: #2196F3;
+  }
+}
+
+
+// - - - - - Extending properties - - - - - //
+
+.black-dog {
+  background-color: #333;
+}
+
+.black-cat {
+  @extend .black-dog;
+  width:20px;
+}
+
+
+// - - - - - Mixin and Include - - - - - //
+
+@mixin transform-rotate($rotateValue) {
+	-webkit-transform: rotate($rotateValue); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+	    -ms-transform: rotate($rotateValue); /* IE 9 */
+	        transform: rotate($rotateValue); /* IE 10, Fx 16+, Op 12.1+ */
+}
+.green-dog {
+	@include transform-rotate(30deg);
+}
+
+// - - - - - Using Operators - - - - - //
+
+$primary-quadrat-dimension: 200px;
+
+.quadrat-central {
+  background-color:red;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: $primary-quadrat-dimension;
+	height: $primary-quadrat-dimension;
+	margin-left: -$primary-quadrat-dimension / 2;
+	margin-top: -$primary-quadrat-dimension / 2; 
+}
+
+
+

@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+h1 {
+  color: tomato; }
+
+a {
+  color: tomato;
+  text-decoration: none; }
+  a .top {
+    font-size: 14px; }
+  a:hover {
+    text-decoration: underline; }
+  nav a {
+    color: #2196F3; }
+
+.black-dog, .black-cat {
+  background-color: #333; }
+
+.black-cat {
+  width: 20px; }
+
+.green-dog {
+  -webkit-transform: rotate(30deg);
+  /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+  -ms-transform: rotate(30deg);
+  /* IE 9 */
+  transform: rotate(30deg);
+  /* IE 10, Fx 16+, Op 12.1+ */ }
+
+.quadrat-central {
+  background-color: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  margin-left: -100px;
+  margin-top: -100px; }
+
+/*# sourceMappingURL=myFirstSass.css.map */
